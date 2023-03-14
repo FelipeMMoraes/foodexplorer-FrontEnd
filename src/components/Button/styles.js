@@ -13,7 +13,6 @@ export const Container = styled.button`
   height: 56px;
   border: 0;
   padding: 0 32px;
-  margin-top: 16px;
   border-radius: 5px;
 
   font-size: 16px;
