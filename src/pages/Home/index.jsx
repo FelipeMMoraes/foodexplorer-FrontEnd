@@ -9,11 +9,9 @@ export function Home(){
       <h1>Hello World</h1>
       <span>Felipe Moraes</span>
 
-      <Button />
-      <Button />
-      <Button />
-      <Button />
-      <Button />
+      <Button title="Entrar" loading/>
+      <Button title="Cadastrar"/>
+      <Button title="Voltar"/>
     </Container>
   )
 }
