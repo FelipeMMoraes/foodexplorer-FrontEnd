@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from '../../styles/devices'
 
 export const Container = styled.button`
   width: 100%;
@@ -27,4 +28,13 @@ export const Container = styled.button`
   &:hover {
     background-color: ${({ theme }) => theme.COLORS.TOMATO_200};
   }
+
+
+  /* @media (max-width: 850px) {
+    padding: 0 24px;
+
+    svg {
+      display: none;
+    }
+  } */
 `

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import {} from "../../styles/devices"
+import { devices, sizes } from "../../styles/devices";
 
 export const Container = styled.header`
   grid-area: header;
@@ -18,11 +18,23 @@ export const Container = styled.header`
   > button {
     max-width: 230px;
   }
+
+  @media (${devices.tablet}){
+    padding: 0 55px;
+  }
+
+  @media (${devices.mobile}){
+    padding: 0 28px;
+  }
 `
 
 export const Logo = styled.img`
   width: 100%;
   max-width: 200px;
+
+  @media (${devices.mobile}) {
+    max-width: 150px;
+  }
 `
 
 export const Logout = styled.button`
@@ -32,5 +44,41 @@ export const Logout = styled.button`
   > svg {
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
     font-size: 22px;
+  }
+
+  @media (${devices.mobile}){
+    display: none;
+  }
+`
+
+export const Receipt = styled.button`
+  display: none;
+  border: none;
+  background: none;
+  align-items: left;
+
+  @media (${devices.tablet}){
+    display: block;
+
+    > svg {
+      color: ${({ theme }) => theme.COLORS.LIGHT_100};
+      font-size: 22px;
+  }
+  }
+`
+
+export const InputWrapper = styled.div`
+  width: 100%;
+
+  @media (${devices.laptop}){
+    display: none;
+  }
+`
+
+export const InputButton = styled.div`
+  width: 100%;
+
+  @media (${devices.tablet}){
+    display: none;
   }
 `

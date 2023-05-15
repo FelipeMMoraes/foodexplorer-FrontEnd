@@ -1,6 +1,6 @@
 import { BiReceipt, BiSearch } from 'react-icons/bi'
 import { FiLogOut } from 'react-icons/fi'
-import { Container, Logo, Logout } from "./styles";
+import { Container, Logo, Logout, Receipt, InputWrapper, InputButton } from "./styles";
 import LogoFoodExplorer from "../../assets/img/LogoFoodExplorer.svg"
 
 import { Button } from "../Button"
@@ -15,15 +15,22 @@ export function Header() {
         alt=""
       />
 
-      <Input placeholder="Busque por pratos ou ingredientes" icon={BiSearch}/>
+      <InputWrapper>
+        <Input placeholder="Busque por pratos ou ingredientes" icon={BiSearch}/>
+      </InputWrapper>
 
+      <InputButton>
+        <Button title="Meu Pedido (0)" icon={BiReceipt}/>
+      </InputButton>
 
-      <Button title="Meu Pedido (0)" icon={BiReceipt}/>
-  
+        <Receipt>
+          <BiReceipt />
+        </Receipt>
 
-      <Logout>
-        <FiLogOut />
-      </Logout>
+        <Logout>
+          <FiLogOut />
+        </Logout>
+
 
     </Container>
   )
